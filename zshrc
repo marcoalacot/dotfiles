@@ -64,4 +64,8 @@ alias bank_router='cd /Volumes/Marco/code/platform/apps/bank_router'
 
 # Environment
 alias dotfiles='cd ~/dotfiles'
+alias sz='source ~/.zshrc'
+
+# Git
+alias g='git status'
 
