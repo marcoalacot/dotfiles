@@ -52,3 +52,16 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # autojump
 [[ -s /etc/profile.d/autojump.zsh ]] && . /etc/profile.d/autojump.zsh
+
+# Aliases
+
+# pT
+alias core='cd /Volumes/Marco/code/platform/apps/core'
+alias payschool='cd /Volumes/Marco/code/platform/apps/payschool'
+alias operations='cd /Volumes/Marco/code/platform/apps/operations'
+alias dashboard='cd /Volumes/Marco/code/platform/apps/dashboards'
+alias bank_router='cd /Volumes/Marco/code/platform/apps/bank_router'
+
+# Environment
+alias dotfiles='cd ~/dotfiles'
+
