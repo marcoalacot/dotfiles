@@ -155,3 +155,6 @@ command Q q
 command Bd bd
 
 NeoBundleCheck
+
+" Environment notes
+map <Leader>pn :sp /Volumes/Marco/Dropbox/work/notes/project_notes.txt<cr>
