@@ -3,12 +3,52 @@ require 'rake'
 
 desc "install the dot files!"
 task :install do
-  skipped_files = %w[README.md Rakefile]
+  @replace_all = false
 
   Dir['*'].each do |file|
     next if skipped_files.include?(file)
 
-    puts "linking ~/.#{file}"
-    system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
+    if file_exists?(file)
+      if @replace_all
+        replace_file(file)
+      else
+        handle_overwrite(file)
+      end
+    else
+      link_file(file)
+    end
   end
+end
+
+def handle_overwrite(file)
+  print "overwrite ~/.#{file}? [ynaq] "
+  case $stdin.gets.chomp
+  when 'a'
+    @replace_all = true
+    replace_file(file)
+  when 'y'
+    replace_file(file)
+  when 'q'
+    exit
+  else
+    puts "skipping ~/.#{file}"
+  end
+end
+
+def skipped_files
+  skipped_files = %w[README.md Rakefile]
+end
+
+def replace_file(file)
+  system %Q{rm "$HOME/.#{file}"}
+  link_file(file)
+end
+
+def link_file(file)
+  puts "linking ~/.#{file}"
+  system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
+end
+
+def file_exists?(file)
+  File.exist?(File.join(ENV['HOME'], ".#{file}"))
 end
