@@ -9,11 +9,7 @@ task :install do
     next if skipped_files.include?(file)
 
     if file_exists?(file)
-      if @replace_all
-        replace_file(file)
-      else
-        handle_overwrite(file)
-      end
+      @replace_all ? replace_file(file) : handle_overwrite(file)
     else
       link_file(file)
     end
@@ -22,9 +18,10 @@ end
 
 def handle_overwrite(file)
   print "overwrite ~/.#{file}? [ynaq] "
+
   case $stdin.gets.chomp
   when 'a'
-    @replace_all = true
+    set_replace_all
     replace_file(file)
   when 'y'
     replace_file(file)
@@ -33,6 +30,10 @@ def handle_overwrite(file)
   else
     puts "skipping ~/.#{file}"
   end
+end
+
+def set_replace_all
+  @replace_all = true
 end
 
 def skipped_files
