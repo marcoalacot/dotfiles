@@ -5,7 +5,6 @@ neobundle.vim
 scss-syntax.vim
 splitjoin.vim
 tabular
-vim-airline
 vim-bundler
 vim-coffee-script
 vim-endwise

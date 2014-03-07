@@ -67,7 +67,6 @@ NeoBundle 'Shougo/vimproc'
 
 " Recommended to install
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-NeoBundle 'bling/vim-airline'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'godlygeek/tabular'
