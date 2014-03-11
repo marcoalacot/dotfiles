@@ -155,5 +155,9 @@ command Bd bd
 
 NeoBundleCheck
 
+" Enable syntax highlighting on Vagrantfiles and Berksfiles
+autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
+autocmd BufNewFile,BufRead Berksfile set filetype=ruby
+
 " Environment notes
 map <Leader>pn :sp /Volumes/Marco/Dropbox/work/notes/project_notes.txt<cr>
