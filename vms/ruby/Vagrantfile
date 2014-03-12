@@ -1,0 +1,45 @@
+%w(vagrant-berkshelf vagrant-vbguest vagrant-omnibus).each do |plugin|
+  Vagrant.require_plugin(plugin)
+end
+
+Vagrant.configure('2') do |config|
+  config.omnibus.chef_version = :latest
+  config.vm.box = "precise-amd64"
+  config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box"
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", 1024]
+  end
+  config.berkshelf.enabled = true
+  config.berkshelf.berksfile_path = "./Berksfile"
+
+  config.vm.network :private_network, :ip => "10.10.2.15", :netmask => "255.255.255.0"
+  config.vm.synced_folder "/Users/Marco/code/ruby", "/home/vagrant/code/ruby", :nfs => true
+  config.ssh.forward_agent = true
+
+  config.vm.network :forwarded_port, :guest => 3000, :host => 3000 # Rails
+
+  config.vm.network :forwarded_port, :guest => 3004, :host => 3004 # extra
+  config.vm.network :forwarded_port, :guest => 3005, :host => 3005 # extra
+  config.vm.network :forwarded_port, :guest => 3006, :host => 3006 # extra
+  config.vm.network :forwarded_port, :guest => 3007, :host => 3007 # extra
+
+  config.vm.network :forwarded_port, :guest => 9292, :host => 4567 # Sinatras
+
+  config.vm.network :forwarded_port, :guest => 3306, :host => 3306 # extra
+  config.vm.network :forwarded_port, :guest => 5901, :host => 5901 # vnc
+
+  config.vm.provision :chef_solo do |chef|
+    chef.nfs = true
+
+    chef.add_recipe('ruby_build')
+    chef.add_recipe("git")
+    chef.add_recipe("ntp")
+    chef.add_recipe("build-essential")
+    chef.add_recipe("postgresql")
+    chef.add_recipe("mongodb-10gen")
+    chef.add_recipe("redis2")
+    chef.add_recipe("memcached")
+    chef.add_recipe("rabbitmq")
+    chef.add_recipe("rbenv")
+  end
+end
