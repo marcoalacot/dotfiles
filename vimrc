@@ -143,6 +143,9 @@ if has("unix")
 endif
 let g:ctrlp_user_command = ['.git/', my_ctrlp_git_command, my_ctrlp_user_command]
 
+" Store backup files on tmp
+set backupdir=~/tmp
+
 " Use poweline fonts in airline
 let g:airline_powerline_fonts=1
 let g:airline_theme="murmur"
