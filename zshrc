@@ -69,3 +69,5 @@ alias sz='source ~/.zshrc'
 # Git
 alias g='git status'
 
+# Enable vim mode
+set -o vi
