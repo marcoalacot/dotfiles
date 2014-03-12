@@ -71,3 +71,6 @@ alias g='git status'
 
 # Enable vim mode
 set -o vi
+
+# Initialize rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
