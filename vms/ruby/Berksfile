@@ -1,0 +1,12 @@
+site :opscode
+
+cookbook 'ruby_build'
+cookbook "git"
+cookbook "ntp"
+cookbook "build-essential"
+cookbook "postgresql"
+cookbook "mongodb-10gen"
+cookbook "redis2"
+cookbook "memcached"
+cookbook "rabbitmq"
+cookbook "rbenv"

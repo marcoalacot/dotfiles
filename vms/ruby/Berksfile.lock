@@ -1,0 +1,70 @@
+{
+  "sources": {
+    "ruby_build": {
+      "locked_version": "0.8.0"
+    },
+    "git": {
+      "locked_version": "3.1.0"
+    },
+    "ntp": {
+      "locked_version": "1.6.0"
+    },
+    "build-essential": {
+      "locked_version": "1.4.4"
+    },
+    "postgresql": {
+      "locked_version": "3.3.4"
+    },
+    "mongodb-10gen": {
+      "locked_version": "0.1.10"
+    },
+    "redis2": {
+      "locked_version": "0.5.0"
+    },
+    "memcached": {
+      "locked_version": "1.7.2"
+    },
+    "rabbitmq": {
+      "locked_version": "3.0.2"
+    },
+    "rbenv": {
+      "locked_version": "1.7.1"
+    },
+    "dmg": {
+      "locked_version": "2.2.0"
+    },
+    "windows": {
+      "locked_version": "1.30.0"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.5"
+    },
+    "runit": {
+      "locked_version": "1.5.10"
+    },
+    "yum": {
+      "locked_version": "3.1.4"
+    },
+    "yum-epel": {
+      "locked_version": "0.3.4"
+    },
+    "apt": {
+      "locked_version": "2.3.8"
+    },
+    "openssl": {
+      "locked_version": "1.1.0"
+    },
+    "ark": {
+      "locked_version": "0.6.0"
+    },
+    "erlang": {
+      "locked_version": "1.5.0"
+    },
+    "yum-erlang_solutions": {
+      "locked_version": "0.2.0"
+    },
+    "ohai": {
+      "locked_version": "2.0.0"
+    }
+  }
+}
