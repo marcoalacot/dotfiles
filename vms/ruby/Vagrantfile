@@ -17,15 +17,7 @@ Vagrant.configure('2') do |config|
   config.ssh.forward_agent = true
 
   config.vm.network :forwarded_port, :guest => 3000, :host => 3000 # Rails
-
-  config.vm.network :forwarded_port, :guest => 3004, :host => 3004 # extra
-  config.vm.network :forwarded_port, :guest => 3005, :host => 3005 # extra
-  config.vm.network :forwarded_port, :guest => 3006, :host => 3006 # extra
-  config.vm.network :forwarded_port, :guest => 3007, :host => 3007 # extra
-
-  config.vm.network :forwarded_port, :guest => 9292, :host => 4567 # Sinatras
-
-  config.vm.network :forwarded_port, :guest => 3306, :host => 3306 # extra
+  config.vm.network :forwarded_port, :guest => 4567, :host => 4567 # Sinatras
   config.vm.network :forwarded_port, :guest => 5901, :host => 5901 # vnc
 
   config.vm.provision :chef_solo do |chef|
