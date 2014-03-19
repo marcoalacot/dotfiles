@@ -1,0 +1,37 @@
+{
+  "json_class": "Chef::Role",
+  "name": "ruby",
+  "description": "Installs a basic ruby environment",
+  "run_list": [
+    "recipe[ruby_build]",
+    "recipe[vim]",
+    "recipe[git]",
+    "recipe[build-essential]",
+    "recipe[postgresql::server]",
+    "recipe[rbenv::vagrant]",
+    "recipe[rbenv::user]",
+    "recipe[mongodb::10gen_repo]",
+    "recipe[mongodb]",
+  ],
+  "override_attributes": {
+    "postgresql": {
+      "password": {
+        "postgres": ""
+      }
+    },
+    "rbenv": {
+      "user_installs": [
+        {
+          "user": "vagrant",
+          "rubies": ["2.1.1"],
+          "global": "2.1.1",
+          "gems": {
+            "2.1.1": [
+              { "name": "bundler" }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
