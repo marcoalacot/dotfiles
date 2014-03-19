@@ -3,6 +3,7 @@
   "name": "ruby",
   "description": "Installs a basic ruby environment",
   "run_list": [
+    "recipe[apt]",
     "recipe[ruby_build]",
     "recipe[vim]",
     "recipe[git]",
@@ -10,8 +11,7 @@
     "recipe[postgresql::server]",
     "recipe[rbenv::vagrant]",
     "recipe[rbenv::user]",
-    "recipe[mongodb::10gen_repo]",
-    "recipe[mongodb]",
+    "recipe[mongodb::10gen_repo]"
   ],
   "override_attributes": {
     "postgresql": {
