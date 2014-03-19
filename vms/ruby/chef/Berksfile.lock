@@ -3,6 +3,9 @@
     "ruby_build": {
       "locked_version": "0.8.0"
     },
+    "vim": {
+      "locked_version": "1.1.2"
+    },
     "git": {
       "locked_version": "3.1.0"
     },

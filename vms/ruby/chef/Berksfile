@@ -1,6 +1,7 @@
 site :opscode
 
 cookbook 'ruby_build'
+cookbook 'vim'
 cookbook "git"
 cookbook "ntp"
 cookbook "build-essential"
