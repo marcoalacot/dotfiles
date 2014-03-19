@@ -1,7 +1,7 @@
 {
   "sources": {
-    "ruby_build": {
-      "locked_version": "0.8.0"
+    "apt": {
+      "locked_version": "2.3.8"
     },
     "vim": {
       "locked_version": "1.1.2"
@@ -18,35 +18,48 @@
     "mongodb-10gen": {
       "locked_version": "0.1.10"
     },
+    "mongodb": {
+      "locked_version": "0.13.7"
+    },
+    "ruby_build": {
+      "locked_version": "0.8.1",
+      "git": "git://github.com/fnichol/chef-ruby_build",
+      "ref": "4d3361995a6953076951693eff1b326ab499fe1e"
+    },
     "rbenv": {
-      "locked_version": "1.7.1"
+      "locked_version": "0.7.2",
+      "git": "git://github.com/fnichol/chef-rbenv.git",
+      "ref": "f2b53292e810dd2b43f6121f9958f5f29979dcb1"
     },
     "dmg": {
-      "locked_version": "2.2.0"
+      "locked_version": "2.1.2"
     },
     "windows": {
-      "locked_version": "1.30.0"
+      "locked_version": "1.11.0"
     },
     "chef_handler": {
-      "locked_version": "1.1.5"
+      "locked_version": "1.1.4"
     },
     "runit": {
-      "locked_version": "1.5.10"
+      "locked_version": "1.5.8"
     },
     "yum": {
       "locked_version": "3.1.4"
     },
     "yum-epel": {
-      "locked_version": "0.3.4"
-    },
-    "apt": {
-      "locked_version": "2.3.8"
+      "locked_version": "0.2.0"
     },
     "openssl": {
       "locked_version": "1.1.0"
     },
-    "ohai": {
-      "locked_version": "2.0.0"
+    "python": {
+      "locked_version": "1.4.6"
+    },
+    "java": {
+      "locked_version": "1.15.4"
+    },
+    "aws": {
+      "locked_version": "1.0.0"
     }
   }
 }
