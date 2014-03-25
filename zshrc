@@ -61,6 +61,7 @@ alias payschool='cd /Volumes/Marco/code/platform/apps/payschool'
 alias operations='cd /Volumes/Marco/code/platform/apps/operations'
 alias dashboard='cd /Volumes/Marco/code/platform/apps/dashboards'
 alias bank_router='cd /Volumes/Marco/code/platform/apps/bank_router'
+alias api='cd /Volumes/Marco/code/platform/apps/api'
 
 # Environment
 alias dotfiles='cd ~/dotfiles'
