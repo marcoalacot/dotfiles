@@ -5,7 +5,7 @@ end
 Vagrant.configure('2') do |config|
   config.omnibus.chef_version = :latest
   config.vm.box = "debian-7.4.0-amd64_virtualbox"
-  config.vm.box_url = "https://s3-eu-west-1.amazonaws.com/ffuenf-vagrant-boxes/debian/debian-7.4.0-amd64_virtualbox.box"
+  config.vm.box_url = "https://dl.dropboxusercontent.com/u/8398/vagrant-boxes/debian/7/amd64/debian-7.4.0-amd64_virtualbox.box"
   config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--memory", 1024]
   end
