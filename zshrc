@@ -69,6 +69,7 @@ alias sz='source ~/.zshrc'
 
 # Git
 alias g='git status'
+alias gau='git add -u' # Add deleted file deleting it from the index
 
 # Enable vim mode
 set -o vi
