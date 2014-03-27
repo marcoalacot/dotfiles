@@ -81,6 +81,7 @@ NeoBundle 'mattn/gist-vim'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'AndrewRadev/splitjoin.vim'
+NeoBundle 'bling/vim-airline'
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
