@@ -65,6 +65,7 @@ alias api='cd /Volumes/Marco/code/platform/apps/api'
 
 # Environment
 alias dotfiles='cd ~/dotfiles'
+alias vmruby='cd ~/dotfiles/vms/ruby'
 alias sz='source ~/.zshrc'
 
 # Git
