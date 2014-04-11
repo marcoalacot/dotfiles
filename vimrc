@@ -161,5 +161,8 @@ NeoBundleCheck
 autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 autocmd BufNewFile,BufRead Berksfile set filetype=ruby
 
+" Indent all the file
+map <leader>i mmgg=G`m<CR>
+
 " Environment notes
 map <Leader>pn :sp /Volumes/Marco/Dropbox/work/notes/project_notes.txt<cr>
