@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="evan"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -40,7 +40,7 @@ DISABLE_CORRECTION="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(gitfast)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -68,13 +68,16 @@ alias dotfiles='cd ~/dotfiles'
 alias vmruby='cd ~/dotfiles/vms/ruby'
 alias gstats='cd /Volumes/Marco/code/github-stats'
 alias sz='source ~/.zshrc'
+alias be='bundle exec'
+alias ber='bundle exec rspec'
+alias r='bin/rspec'
 
 # Git
 alias g='git status'
 alias gau='git add -u' # Add deleted file deleting it from the index
 
 # Enable vim mode
-set -o vi
+# set -o vi
 
 # Initialize rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
