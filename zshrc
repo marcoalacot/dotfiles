@@ -71,6 +71,7 @@ alias sz='source ~/.zshrc'
 alias be='bundle exec'
 alias ber='bundle exec rspec'
 alias r='bin/rspec'
+alias ctags="`brew --prefix`/bin/ctags"
 
 # Git
 alias g='git status'
