@@ -67,7 +67,6 @@ NeoBundle 'Shougo/vimproc'
 
 " Recommended to install
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'kchmck/vim-coffee-script'
@@ -112,7 +111,9 @@ let mapleader=","
 map <leader>gg :e Gemfile<cr>
 map <leader>gr :e config/routes.rb<cr>
 map <leader>db :e config/database.yml<cr>
-map <leader>f :CtrlP .<cr>
+
+" Launch FZF
+map <leader>f :FZF<cr>
 
 " Edit another file in the same directory as the current file
 " uses expression to extract path from current file's path
@@ -127,30 +128,15 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" Improve CtrlP
-let ctrlp_filter_greps = "".
-      \ "egrep -iv '\\.(" .
-      \ "jar|class|swp|swo|log|so|o|pyc|jpe?g|png|gif|mo|po" .
-      \ ")$' | " .
-      \ "egrep -v '^(\\./)?(" .
-      \ "deploy/|lib/|classes/|libs/|deploy/vendor/|.git/|.hg/|.svn/|.*migrations/" .
-      \ ")'"
-let my_ctrlp_git_command = "" .
-      \ "cd %s && git ls-files | " .
-      \ ctrlp_filter_greps
-if has("unix")
-  let my_ctrlp_user_command = "" .
-        \ "find %s '(' -type f -or -type l ')' -maxdepth 15 -not -path '*/\\.*/*' | " .
-        \ ctrlp_filter_greps
-endif
-let g:ctrlp_user_command = ['.git/', my_ctrlp_git_command, my_ctrlp_user_command]
-
 " Store backup files on tmp
 set backupdir=~/tmp
 
 " Use poweline fonts in airline
 let g:airline_powerline_fonts=1
 let g:airline_theme="murmur"
+
+" fzf
+set rtp+=~/.fzf
 
 " alias command
 command W w

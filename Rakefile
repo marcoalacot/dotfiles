@@ -14,6 +14,8 @@ task :install do
       link_file(file)
     end
   end
+
+  install_fzf
 end
 
 def handle_overwrite(file)
@@ -52,4 +54,9 @@ end
 
 def file_exists?(file)
   File.exist?(File.join(ENV['HOME'], ".#{file}"))
+end
+
+def install_fzf
+  system %Q{git clone https://github.com/junegunn/fzf.git ~/.fzf}
+  system %Q{~/.fzf/install}
 end
