@@ -82,6 +82,7 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'bling/vim-bufferline'
 NeoBundle 'xolox/vim-misc'
 NeoBundle 'xolox/vim-easytags'
+NeoBundle 'scrooloose/nerdtree'
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
@@ -137,6 +138,9 @@ let g:airline_theme="murmur"
 
 " fzf
 set rtp+=~/.fzf
+
+" Nerdtree
+map <leader>n :NERDTree<cr>
 
 " alias command
 command W w
