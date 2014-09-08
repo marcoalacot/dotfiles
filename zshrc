@@ -56,12 +56,15 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # Aliases
 
 # pT
-alias core='cd /Volumes/Marco/code/platform/apps/core'
-alias payschool='cd /Volumes/Marco/code/platform/apps/payschool'
-alias operations='cd /Volumes/Marco/code/platform/apps/operations'
-alias dashboard='cd /Volumes/Marco/code/platform/apps/dashboards'
-alias bank_router='cd /Volumes/Marco/code/platform/apps/bank_router'
-alias api='cd /Volumes/Marco/code/platform/apps/api'
+base_platform=('/Volumes/Marco/code/platform')
+
+alias core="cd $base_platform/apps/core"
+alias payschool="cd $base_platform/apps/payschool"
+alias operations="cd $base_platform/apps/operations"
+alias dashboard="cd $base_platform/apps/dashboards"
+alias bank_router="cd $base_platform/apps/bank_router"
+alias api="cd $base_platform/apps/api"
+alias platform=$base_platform
 
 # Environment
 alias dotfiles='cd ~/dotfiles'
@@ -82,3 +85,4 @@ alias gau='git add -u' # Add deleted file deleting it from the index
 
 # Initialize rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+source ~/.fzf.zsh
