@@ -64,6 +64,7 @@ alias operations="cd $base_platform/apps/operations"
 alias dashboard="cd $base_platform/apps/dashboards"
 alias bank_router="cd $base_platform/apps/bank_router"
 alias api="cd $base_platform/apps/api"
+alias filer="cd $base_platform/apps/filer"
 alias platform=$base_platform
 
 # Environment
