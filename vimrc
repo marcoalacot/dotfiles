@@ -161,3 +161,6 @@ map <leader>i mmgg=G`m<CR>
 
 " Environment notes
 map <Leader>pn :sp /Volumes/Marco/Dropbox/work/notes/project_notes.txt<cr>
+
+" Open a file in a current directory
+cabbr <expr> %% expand('%:p:h')
