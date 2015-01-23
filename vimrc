@@ -1,6 +1,9 @@
 set encoding=utf-8
 set nocompatible
 
+set smartindent
+set autoindent
+
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
