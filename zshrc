@@ -67,6 +67,9 @@ alias api="cd $base_platform/apps/api"
 alias filer="cd $base_platform/apps/filer"
 alias platform=$base_platform
 
+# General
+alias code="cd /Volumes/Marco/code"
+
 # Environment
 alias dotfiles='cd ~/dotfiles'
 alias vmruby='cd ~/dotfiles/vms/ruby'
