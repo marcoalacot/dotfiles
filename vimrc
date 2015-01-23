@@ -84,6 +84,7 @@ NeoBundle 'bling/vim-bufferline'
 NeoBundle 'xolox/vim-misc'
 NeoBundle 'xolox/vim-easytags'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'kchmck/vim-coffee-script'
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
@@ -154,9 +155,13 @@ NeoBundleCheck
 " Enable syntax highlighting on Vagrantfiles and Berksfiles
 autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 autocmd BufNewFile,BufRead Berksfile set filetype=ruby
+autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 
 " Indent all the file
 map <leader>i mmgg=G`m<CR>
 
 " Environment notes
 map <Leader>pn :sp /Volumes/Marco/Dropbox/work/notes/project_notes.txt<cr>
+
+" Open a file in a current directory
+cabbr <expr> %% expand('%:p:h')

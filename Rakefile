@@ -15,6 +15,8 @@ task :install do
     end
   end
 
+  install_neobundle
+  install_oh_my_zsh
   install_fzf
 end
 
@@ -56,7 +58,15 @@ def file_exists?(file)
   File.exist?(File.join(ENV['HOME'], ".#{file}"))
 end
 
+def install_neobundle
+  system %Q{curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh}
+end
+
 def install_fzf
   system %Q{git clone https://github.com/junegunn/fzf.git ~/.fzf}
   system %Q{~/.fzf/install}
+end
+
+def install_oh_my_zsh
+  system %Q{curl -L http://install.ohmyz.sh | sh}
 end

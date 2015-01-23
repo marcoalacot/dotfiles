@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="evan"
+ZSH_THEME="minimal"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -40,7 +40,7 @@ DISABLE_CORRECTION="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(gitfast)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -56,12 +56,19 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # Aliases
 
 # pT
-alias core='cd /Volumes/Marco/code/platform/apps/core'
-alias payschool='cd /Volumes/Marco/code/platform/apps/payschool'
-alias operations='cd /Volumes/Marco/code/platform/apps/operations'
-alias dashboard='cd /Volumes/Marco/code/platform/apps/dashboards'
-alias bank_router='cd /Volumes/Marco/code/platform/apps/bank_router'
-alias api='cd /Volumes/Marco/code/platform/apps/api'
+base_platform=('/Volumes/Marco/code/platform')
+
+alias core="cd $base_platform/apps/core"
+alias payschool="cd $base_platform/apps/payschool"
+alias operations="cd $base_platform/apps/operations"
+alias dashboard="cd $base_platform/apps/dashboards"
+alias bank_router="cd $base_platform/apps/bank_router"
+alias api="cd $base_platform/apps/api"
+alias filer="cd $base_platform/apps/filer"
+alias platform=$base_platform
+
+# General
+alias code="cd /Volumes/Marco/code"
 
 # Environment
 alias dotfiles='cd ~/dotfiles'
@@ -82,3 +89,4 @@ alias gau='git add -u' # Add deleted file deleting it from the index
 
 # Initialize rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+source ~/.fzf.zsh
