@@ -87,6 +87,7 @@ NeoBundle 'xolox/vim-misc'
 NeoBundle 'xolox/vim-easytags'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'ervandew/supertab'
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
