@@ -87,6 +87,7 @@ NeoBundle 'ervandew/supertab'
 if has("autocmd")
   " Enable file type detection
   filetype on
+  filetype indent on
 
   " Syntax of these languages is fussy over tabs Vs spaces
   autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
