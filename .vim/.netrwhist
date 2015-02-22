@@ -1,7 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Volumes/Marco/code/platform/apps/operations'
 let g:netrw_dirhist_2='/Volumes/Marco/code/platform/apps/filer'
 let g:netrw_dirhist_3='/Volumes/Marco/code/platform/apps/core/app/presenters'
 let g:netrw_dirhist_4='/Volumes/Marco/code/platform/apps/filer'
 let g:netrw_dirhist_5='/Users/marco/dotfiles/.git'
+let g:netrw_dirhist_6='/Volumes/Marco/code/platform/apps/core/app/assets/javascripts/admin'
+let g:netrw_dirhist_7='/Volumes/Marco/code/platform/libs/peertransfer_translations'
+let g:netrw_dirhist_8='/Volumes/Marco/code/platform/libs/peertransfer_translations/lib/peertransfer_translations'
+let g:netrw_dirhist_9='/Users/marco/Downloads/Core/fields.en.yml'
