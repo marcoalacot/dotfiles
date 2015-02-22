@@ -48,11 +48,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export PTCODE=/Volumes/Marco/code
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-# autojump
-[[ -s /etc/profile.d/autojump.zsh ]] && . /etc/profile.d/autojump.zsh
-
 # Aliases
 
 # pT
@@ -78,7 +73,6 @@ alias sz='source ~/.zshrc'
 alias be='bundle exec'
 alias ber='bundle exec rspec'
 alias r='bin/rspec'
-alias ctags="`brew --prefix`/bin/ctags"
 
 # Git
 alias g='git status'
