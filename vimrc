@@ -72,22 +72,16 @@ NeoBundle 'Shougo/vimproc'
 " Recommended to install
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 NeoBundle 'cakebaker/scss-syntax.vim'
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tpope/vim-haml'
-NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'mileszs/ack.vim'
-NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'bling/vim-bufferline'
-NeoBundle 'xolox/vim-misc'
-NeoBundle 'xolox/vim-easytags'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'ervandew/supertab'
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
@@ -118,9 +112,6 @@ map <leader>gg :e Gemfile<cr>
 map <leader>gr :e config/routes.rb<cr>
 map <leader>db :e config/database.yml<cr>
 
-" Launch FZF
-map <leader>f :FZF<cr>
-
 " Edit another file in the same directory as the current file
 " uses expression to extract path from current file's path
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
@@ -140,9 +131,6 @@ set backupdir=~/tmp
 " Use poweline fonts in airline
 let g:airline_powerline_fonts=1
 let g:airline_theme="murmur"
-
-" fzf
-set rtp+=~/.fzf
 
 " Nerdtree
 map <leader>n :NERDTree<cr>
@@ -165,6 +153,11 @@ map <leader>i mmgg=G`m<CR>
 
 " Environment notes
 map <Leader>pn :sp /Volumes/Marco/Dropbox/work/notes/project_notes.txt<cr>
-
 " Open a file in a current directory
 cabbr <expr> %% expand('%:p:h')
+
+" vim-rspec
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
