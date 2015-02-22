@@ -152,6 +152,11 @@ map <leader>i mmgg=G`m<CR>
 
 " Environment notes
 map <Leader>pn :sp /Volumes/Marco/Dropbox/work/notes/project_notes.txt<cr>
-
 " Open a file in a current directory
 cabbr <expr> %% expand('%:p:h')
+
+" vim-rspec
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
