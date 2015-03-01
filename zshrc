@@ -78,6 +78,9 @@ alias r='bin/rspec'
 alias g='git status'
 alias gau='git add -u' # Add deleted file deleting it from the index
 
+# Tmux
+alias tmux="tmux -2" # Force tmux to use 256 colors
+
 # Enable vim mode
 # set -o vi
 
