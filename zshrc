@@ -61,6 +61,7 @@ alias bank_router="cd $base_platform/apps/bank_router"
 alias api="cd $base_platform/apps/api"
 alias filer="cd $base_platform/apps/filer"
 alias platform=$base_platform
+alias infra="$base_platform/infra"
 
 # General
 alias code="cd /Volumes/Marco/code"
@@ -84,3 +85,6 @@ alias gau='git add -u' # Add deleted file deleting it from the index
 # Initialize rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 source ~/.fzf.zsh
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
