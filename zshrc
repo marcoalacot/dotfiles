@@ -40,7 +40,7 @@ DISABLE_CORRECTION="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+#plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -82,6 +82,10 @@ alias r='bin/rspec'
 alias g='git status'
 alias gau='git add -u' # Add deleted file deleting it from the index
 alias gdc='git diff --cached'
+alias gd='git diff'
+
+# Tmux
+alias tmux="tmux -2" # Force tmux to use 256 colors
 
 # Enable vim mode
 # set -o vi
@@ -92,3 +96,8 @@ source ~/.fzf.zsh
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+# https://gist.github.com/msabramo/2355834
+function git_prompt_info() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}${ZSH_THEME_GIT_PROMPT_CLEAN}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
+}

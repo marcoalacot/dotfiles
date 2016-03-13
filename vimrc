@@ -57,19 +57,17 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.scssc,*.sassc
 set autoread                      " Update open files when changed externally
 
 if has('vim_starting')
+  set nocompatible
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
-
+call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'  " Let NeoBundle manage NeoBundle
+call neobundle#end()
 
 " Recommended to install
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 NeoBundle 'Shougo/vimproc'
-
-" Recommended to install
-" After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'tpope/vim-endwise'
@@ -87,6 +85,7 @@ NeoBundle 'danro/rename.vim'
 if has("autocmd")
   " Enable file type detection
   filetype on
+  filetype indent on
 
   " Syntax of these languages is fussy over tabs Vs spaces
   autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
@@ -152,7 +151,7 @@ autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 map <leader>i mmgg=G`m<CR>
 
 " Environment notes
-map <Leader>pn :sp /Volumes/Marco/Dropbox/work/notes/project_notes.txt<cr>
+map <Leader>pn :sp ~/notes/project_notes.txt<cr>
 " Open a file in a current directory
 cabbr <expr> %% expand('%:p:h')
 

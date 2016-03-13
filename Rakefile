@@ -15,6 +15,7 @@ task :install do
     end
   end
 
+  install_colour
   install_neobundle
   install_oh_my_zsh
   install_fzf
@@ -34,6 +35,12 @@ def handle_overwrite(file)
   else
     puts "skipping ~/.#{file}"
   end
+end
+
+def install_colour
+  puts "Installing colour..."
+  system %Q{mkdir "$HOME/.vim/colors"}
+  system %Q{cp "$PWD/colors/molokai.vim" "$HOME/.vim/colors/molokai.vim"}
 end
 
 def set_replace_all
