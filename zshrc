@@ -52,6 +52,7 @@ export PTCODE=/Volumes/Marco/code
 
 # pT
 base_platform=('/Volumes/Marco/code/platform')
+base_code=('/Volumes/Marco/code/')
 
 alias core="cd $base_platform/apps/core"
 alias payschool="cd $base_platform/apps/payschool"
@@ -62,6 +63,8 @@ alias api="cd $base_platform/apps/api"
 alias filer="cd $base_platform/apps/filer"
 alias platform=$base_platform
 alias infra="$base_platform/infra"
+alias class_gateway="$base_platform/apps/class_gateway"
+alias retrospecter="$base_code/retrospecter"
 
 # General
 alias code="cd /Volumes/Marco/code"
@@ -78,6 +81,7 @@ alias r='bin/rspec'
 # Git
 alias g='git status'
 alias gau='git add -u' # Add deleted file deleting it from the index
+alias gdc='git diff --cached'
 
 # Enable vim mode
 # set -o vi
