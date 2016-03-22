@@ -67,6 +67,7 @@ call neobundle#end()
 
 " Recommended to install
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
+call neobundle#begin()
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundle 'tpope/vim-haml'
@@ -75,11 +76,13 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'bling/vim-bufferline'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'danro/rename.vim'
+call neobundle#end()
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
