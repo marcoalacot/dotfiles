@@ -76,16 +76,21 @@ alias gstats='cd /Volumes/Marco/code/github-stats'
 alias sz='source ~/.zshrc'
 alias be='bundle exec'
 alias ber='bundle exec rspec'
-alias r='bin/rspec'
+alias s='bundle exec rspec spec'
 
 # Git
 alias g='git status'
+alias ga='git add'
 alias gau='git add -u' # Add deleted file deleting it from the index
 alias gdc='git diff --cached'
 alias gd='git diff'
+alias gc='git commit'
 
 # Tmux
 alias tmux="tmux -2" # Force tmux to use 256 colors
+
+# Misc
+alias weather="curl -4 http://wttr.in/xativa"
 
 # Enable vim mode
 # set -o vi
@@ -101,3 +106,5 @@ function git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
   echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}${ZSH_THEME_GIT_PROMPT_CLEAN}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
 }
+
+export RACK_ENV=development
