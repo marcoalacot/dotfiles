@@ -19,6 +19,7 @@ task :install do
   install_neobundle
   install_oh_my_zsh
   install_fzf
+  create_notes_directory
 end
 
 def handle_overwrite(file)
@@ -76,4 +77,8 @@ end
 
 def install_oh_my_zsh
   system %Q{curl -L http://install.ohmyz.sh | sh}
+end
+
+def create_notes_directory
+  system %Q{mkdir "$HOME/notes"}
 end

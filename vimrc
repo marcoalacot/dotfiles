@@ -134,7 +134,7 @@ set backupdir=~/tmp
 
 " Use poweline fonts in airline
 let g:airline_powerline_fonts=1
-let g:airline_theme="murmur"
+let g:airline_theme="tomorrow"
 
 " Nerdtree
 map <leader>n :NERDTree<cr>
