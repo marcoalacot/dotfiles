@@ -65,6 +65,7 @@ alias platform=$base_platform
 alias infra="$base_platform/infra"
 alias class_gateway="$base_platform/apps/class_gateway"
 alias retrospecter="$base_code/retrospecter"
+alias platform="cd $base_platform"
 
 # General
 alias code="cd /Volumes/Marco/code"
@@ -85,6 +86,7 @@ alias gau='git add -u' # Add deleted file deleting it from the index
 alias gdc='git diff --cached'
 alias gd='git diff'
 alias gc='git commit'
+alias sourcetree='open -a SourceTree'
 
 # Tmux
 alias tmux="tmux -2" # Force tmux to use 256 colors
@@ -104,7 +106,8 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # https://gist.github.com/msabramo/2355834
 function git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}${ZSH_THEME_GIT_PROMPT_CLEAN}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
+  hostname=$(hostname)
+  echo "$hostname $ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}${ZSH_THEME_GIT_PROMPT_CLEAN}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
 }
 
 export RACK_ENV=development
