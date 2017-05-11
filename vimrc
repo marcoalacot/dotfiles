@@ -82,7 +82,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'danro/rename.vim'
-NeoBundle 'keith/swift.vim'
+NeoBundle 'toyamarinyon/vim-swift'
 
 call neobundle#end()
 
