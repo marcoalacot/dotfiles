@@ -56,34 +56,33 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.scssc,*.sassc
 
 set autoread                      " Update open files when changed externally
 
-if has('vim_starting')
-  set nocompatible
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+
+" vim-plug automatic installation
+
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'  " Let NeoBundle manage NeoBundle
-call neobundle#end()
+call plug#begin('~/.vim/plugged')
 
-" Recommended to install
-" After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-call neobundle#begin()
-NeoBundle 'Shougo/vimproc'
-NeoBundle 'cakebaker/scss-syntax.vim'
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'vim-airline/vim-airline-themes'
-NeoBundle 'bling/vim-bufferline'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'ervandew/supertab'
-NeoBundle 'danro/rename.vim'
-NeoBundle 'toyamarinyon/vim-swift'
+Plug 'Shougo/vimproc'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'tpope/vim-haml'
+Plug 'tpope/vim-endwise'
+Plug 'pangloss/vim-javascript'
+Plug 'plasticboy/vim-markdown'
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'bling/vim-bufferline'
+Plug 'scrooloose/nerdtree'
+Plug 'kchmck/vim-coffee-script'
+Plug 'ervandew/supertab'
+Plug 'danro/rename.vim'
+Plug 'toyamarinyon/vim-swift'
 
-call neobundle#end()
+call plug#end()
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
@@ -143,8 +142,6 @@ command W w
 command Wq wq
 command Q q
 command Bd bd
-
-NeoBundleCheck
 
 " Enable syntax highlighting on Vagrantfiles and Berksfiles
 autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
