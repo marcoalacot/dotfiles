@@ -81,6 +81,8 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'ervandew/supertab'
 Plug 'danro/rename.vim'
 Plug 'toyamarinyon/vim-swift'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -121,6 +123,9 @@ map <leader>e :e %%
 map <leader>sp :sp %%
 map <leader>vsp :vsp %%
 
+" Fzf shortcuts
+map <leader>f :Files<cr>
+
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -155,9 +160,3 @@ map <leader>i mmgg=G`m<CR>
 map <Leader>pn :sp ~/notes/project_notes.txt<cr>
 " Open a file in a current directory
 cabbr <expr> %% expand('%:p:h')
-
-" vim-rspec
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
