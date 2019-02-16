@@ -160,3 +160,8 @@ map <leader>i mmgg=G`m<CR>
 map <Leader>pn :sp ~/notes/project_notes.txt<cr>
 " Open a file in a current directory
 cabbr <expr> %% expand('%:p:h')
+
+" ag helpers
+let g:ackprg = 'ag --vimgrep'
+map <Leader>a :Ag<space>
+
