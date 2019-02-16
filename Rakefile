@@ -16,9 +16,9 @@ task :install do
   end
 
   install_colour
-  install_neobundle
   install_oh_my_zsh
   install_fzf
+  install_ag
   create_notes_directory
 end
 
@@ -66,8 +66,8 @@ def file_exists?(file)
   File.exist?(File.join(ENV['HOME'], ".#{file}"))
 end
 
-def install_neobundle
-  system %Q{curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh}
+def install_ag
+  system %Q{sudo apt-get install silversearcher-ag}
 end
 
 def install_fzf
